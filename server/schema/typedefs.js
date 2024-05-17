@@ -1,17 +1,23 @@
 const typedefs = `
-  type Book {
-    title: String
-    author: Author
+  type Kitty {
+    _id: ID
+    name: String
   }
 
-  type Author {
-    name: String
-    books: [Book]
+  type User {
+    _id: ID
+    username: String
+    password: String
   }
 
   type Query {
-    numberSix: Int! # Should always return the number 6 when queried
-    numberSeven: Int! # Should always return 7
+    kitty: [Kitty]
+    users: [User]
+  }
+
+  type Mutation {
+    addKitty(name: String!): Kitty
+    addUser(username: String!, password: String!): User
   }
 `;
 

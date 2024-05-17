@@ -1,10 +1,26 @@
+const { Kitten, User } = require('../models');
+
 const resolvers = {
   Query: {
-    numberSix() {
-      return 6;
+    async kitty() {
+      const kitty = await Kitten.find();
+
+      return kitty;
     },
-    numberSeven() {
-      return 7;
+    async users() {
+      return User.find();
+    },
+  },
+  Mutation: {
+    async addKitty(_, args) {
+      const kitty = await Kitten.create({
+        name: args.name,
+      });
+
+      return kitty;
+    },
+    async addUser(_, args) {
+      return User.create(args);
     },
   },
 };

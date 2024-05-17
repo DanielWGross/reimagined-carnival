@@ -1,6 +1,7 @@
 const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
+const mongoose = require('mongoose');
 const typeDefs = require('./schema/typedefs');
 const resolvers = require('./schema/resolvers');
 
@@ -27,6 +28,7 @@ async function startServer() {
     }),
   );
 
+  await mongoose.connect('mongodb://127.0.0.1:27017/carnival');
   app.listen(PORT, () => console.log('LISTEN!'));
 }
 
