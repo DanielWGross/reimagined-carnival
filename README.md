@@ -6,13 +6,16 @@
 
 ## Whats in the server?
 
-- GraphQL w/ Apollo
-- MongoDB
-- Mongoose
-- bcrypt
+- ✅ bcrypt
 - JWT
-- concurrently
+- ✅ MongoDB
+- ✅ Mongoose
+- ✅ GraphQL w/ Apollo
 - ✅ Express
 - ✅📦 nodemon
 - ✅ Prettier
 - ✅ ESLint
+
+## Whats in the client?
+
+- concurrently
