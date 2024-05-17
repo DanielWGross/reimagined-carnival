@@ -1,0 +1,16 @@
+{
+  "name": "reimagined-carnival",
+  "version": "1.0.0",
+  "description": "## Whats in the server?",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-wesbos": "^4.0.1"
+  }
+}
