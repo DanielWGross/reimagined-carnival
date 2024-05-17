@@ -6,7 +6,7 @@
 
 ## Whats in the server?
 
-- JWT
+- ✅ JWT
 - ✅ bcrypt
 - ✅ MongoDB
 - ✅ Mongoose
