@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const { Kitten, User } = require('../models');
 
 const resolvers = {
@@ -20,7 +21,18 @@ const resolvers = {
       return kitty;
     },
     async addUser(_, args) {
-      return User.create(args);
+      const user = await User.create(args);
+
+      const token = jwt.sign(
+        { username: user.username, _id: user._id },
+        process.env.SECRET,
+      );
+
+      return {
+        _id: user._id,
+        username: user.username,
+        token,
+      };
     },
   },
 };

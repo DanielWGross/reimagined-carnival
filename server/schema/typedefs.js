@@ -10,6 +10,12 @@ const typedefs = `
     password: String
   }
 
+  type AuthUser {
+    _id: ID
+    username: String
+    token: String
+  }
+
   type Query {
     kitty: [Kitty]
     users: [User]
@@ -17,7 +23,7 @@ const typedefs = `
 
   type Mutation {
     addKitty(name: String!): Kitty
-    addUser(username: String!, password: String!): User
+    addUser(username: String!, password: String!): AuthUser
   }
 `;
 

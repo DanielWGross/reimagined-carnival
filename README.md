@@ -6,8 +6,8 @@
 
 ## Whats in the server?
 
-- ✅ bcrypt
 - JWT
+- ✅ bcrypt
 - ✅ MongoDB
 - ✅ Mongoose
 - ✅ GraphQL w/ Apollo
