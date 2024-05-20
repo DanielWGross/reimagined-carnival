@@ -18,7 +18,7 @@
 
 ## Whats in the client?
 
-- concurrently
+- concurrently - add scripts to start server & client
 - React w/ Vite
 - GraphQL w/ Apollo
 - React Router

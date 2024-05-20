@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const typeDefs = require('./schema/typedefs');
 const resolvers = require('./schema/resolvers');
 
-const PORT = process.env.PORT || 5309;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
