@@ -19,7 +19,7 @@
 ## Whats in the client?
 
 - concurrently - add scripts to start server & client
-- React w/ Vite
+- ✅ React w/ Vite
 - GraphQL w/ Apollo
-- React Router
+- ✅ React Router
 - json web token
