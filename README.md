@@ -12,10 +12,14 @@
 - ✅ Mongoose
 - ✅ GraphQL w/ Apollo
 - ✅ Express
-- ✅📦 nodemon
+- ✅ 📦 nodemon
 - ✅ Prettier
 - ✅ ESLint
 
 ## Whats in the client?
 
 - concurrently
+- React w/ Vite
+- GraphQL w/ Apollo
+- React Router
+- json web token

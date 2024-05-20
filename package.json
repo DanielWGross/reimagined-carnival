@@ -4,6 +4,7 @@
   "description": "## Whats in the server?",
   "main": "index.js",
   "scripts": {
+    "install": "cd client/ && npm install && cd ../server && npm install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
