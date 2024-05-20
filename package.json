@@ -2,8 +2,9 @@
   "name": "reimagined-carnival",
   "version": "1.0.0",
   "description": "## Whats in the server?",
-  "main": "index.js",
+  "main": "index.js", 
   "scripts": {
+    "start:dev": "concurrently -n server,client \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "install": "cd client/ && npm install && cd ../server && npm install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -13,5 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "eslint-config-wesbos": "^4.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
