@@ -1,5 +1,32 @@
+import { useQuery, gql } from '@apollo/client';
+
+const GET_KITTIES = gql`
+  query Kitty {
+    kitty {
+      _id
+      name
+    }
+  }
+`;
+
 function Home() {
-  return <h2>Welcome to Home!</h2>;
+  const { loading, error, data } = useQuery(GET_KITTIES);
+
+  if (error) {
+    return <p>You broke it, way to go...</p>;
+  }
+
+  if (loading) {
+    return <p>Loading!!!! Please chill out a min.</p>;
+  }
+
+  return (
+    <div>
+      {data.kitty.map((kitten) => (
+        <p key={kitten._id}>{kitten.name}</p>
+      ))}
+    </div>
+  );
 }
 
 export default Home;

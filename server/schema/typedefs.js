@@ -24,6 +24,7 @@ const typedefs = `
   type Mutation {
     addKitty(name: String!): Kitty
     addUser(username: String!, password: String!): AuthUser
+    login(username: String!, password: String!): AuthUser
   }
 `;
 

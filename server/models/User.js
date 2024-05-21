@@ -14,6 +14,10 @@ const userSchema = new Schema({
   },
 });
 
+userSchema.methods.isValidPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
+
 userSchema.pre('save', async function (next) {
   const hashedPassword = await bcrypt.hash(this.password, saltRounds);
 
