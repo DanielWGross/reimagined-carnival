@@ -21,5 +21,5 @@
 - ✅ concurrently - add scripts to start server & client
 - ✅ React w/ Vite
 - ✅ React Router
-- GraphQL w/ Apollo
-- json web token
+- ✅ GraphQL w/ Apollo
+- ✅ json web token

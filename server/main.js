@@ -5,6 +5,7 @@ const { expressMiddleware } = require('@apollo/server/express4');
 const mongoose = require('mongoose');
 const typeDefs = require('./schema/typedefs');
 const resolvers = require('./schema/resolvers');
+const { authMiddleware } = require('./utils/auth');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -20,7 +21,7 @@ async function startServer() {
     '/graphql',
     express.urlencoded({ extended: false }),
     express.json(),
-    expressMiddleware(server),
+    expressMiddleware(server, { context: authMiddleware }),
   );
 
   app.get('/', async (req, res) =>

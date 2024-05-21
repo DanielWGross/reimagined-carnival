@@ -3,7 +3,7 @@ const { Kitten, User } = require('../models');
 
 const resolvers = {
   Query: {
-    async kitty() {
+    async kitty(_, __, context) {
       const kitty = await Kitten.find();
 
       return kitty;
