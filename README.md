@@ -23,3 +23,9 @@
 - ✅ React Router
 - ✅ GraphQL w/ Apollo
 - ✅ json web token
+
+## Things Still Remaining
+
+- Add scripts to build both client and server for production
+- Deploy application to production (Heroku, Render, etc.)
+- Add a route to main.js to handle serving the build React app for production from the dist folder
